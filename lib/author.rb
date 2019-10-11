@@ -10,8 +10,8 @@ class Author
 
     def posts
         # We have access to Post class attributes, thanks to attr_accessor :post
-        # we .select from @@all SET Post object instance = author
-        Post.all.select {|post| post.author = self }
+        # we .select from @@all SET Post object instance == author
+        Post.all.select {|post| post.author == self }
     end
 
     def add_post(post)
