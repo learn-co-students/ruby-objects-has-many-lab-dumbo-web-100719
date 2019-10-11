@@ -1,6 +1,5 @@
 require 'pry'
 class Song
-    # by using :artist, i'm linking artist and song classes
     attr_accessor :name, :artist
     
     @@all = []
