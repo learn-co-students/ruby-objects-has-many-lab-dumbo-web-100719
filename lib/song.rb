@@ -1,10 +1,22 @@
+require "pry"
 class Song
-    attr_accessor :name
+    attr_accessor :name, :artist
 
     @@all = []
-    
-    def initialized(name)
+
+    def initialize(name)
         @name = name
         @@all << self
+    end
+
+    def self.all
+        @@all
+    end
+
+    def artist_name
+        if self.artist
+            return self.artist.name
+        end
+        nil
     end
 end
